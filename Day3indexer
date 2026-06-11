@@ -1,1 +1,33 @@
+//indexer - it is a special feature that allows any class of objectto access it like an array.
+using System;
 
+class Student
+{
+    private string[] names = { "John", "Alice", "Bob" };
+
+    public string this[int index]
+    {
+        get
+        {
+            return names[index];
+        }
+        set
+        {
+            names[index] = value;
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Student s = new Student();
+
+        Console.WriteLine(s[0]); // Calls get
+
+        s[1] = "Mary"; // Calls set
+
+        Console.WriteLine(s[1]);
+    }
+}

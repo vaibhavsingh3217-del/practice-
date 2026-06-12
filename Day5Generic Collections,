@@ -1,1 +1,107 @@
-//Genne
+//Generic collection is a container  which stores a specific type of data.
+//a generic collection is simply a collection that is designed to hold only one specific type of data.
+//generic allow to store collection of a specific type safely without casting.
+//<List(T)> = dynamic array that stores elements in order.
+//List<string> names =  new List<string>();
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        
+        List<int> numbers = new List<int>();
+
+      
+        numbers.Add(10);
+        numbers.Add(20);
+        numbers.Add(30);
+
+       
+        Console.WriteLine("List elements:");
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+
+        
+        Console.WriteLine("\nFirst element: " + numbers[0]);
+
+        
+        numbers.Remove(20);
+
+        
+        Console.WriteLine("\nAfter removing 20:");
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+
+        
+        Console.WriteLine("\nTotal elements: " + numbers.Count);
+    }
+}
+//Output:- List elements: 10
+//                        20
+//                        30
+//         First elements: 10
+//         After removing 20 : 10
+//                             30
+//         Total elements : 2
+
+
+
+//dictionary<T Key,T Value> = new Dictionary<T key , T Value>();
+//stores key value pair for fast lookup by key.
+//Dictionary <int, string> students = new Dictionary <int, string>();
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Dictionary<int, string> students = new Dictionary<int, string>();
+        students.Add(1, "Alice");
+        students.Add(2, "Bob");
+        students.Add(3, "Charlie");
+        Console.WriteLine("Student list:");
+        foreach(KeyValuePair<int, string>student in students)
+        {
+            Console.WriteLine("ID: " + student.Key + ",Name: " + student.Value);
+        }
+        Console.WriteLine("\nStudent with ID 2: " + students[2]);
+        students[2] = "Robert";
+        students.Remove(1);
+        Console.WriteLine("\nUpdated Student List: ");
+        foreach(KeyValuePair<int,string>student in students)
+        {
+            Console.WriteLine("ID:" + student.Key + ",Name: " + student.Value);
+        }
+        if (students.ContainsKey(3))
+        {
+            Console.WriteLine("\nStudent ID 3 exists.");
+        }
+        Console.WriteLine("Total students: " + students.Count);
+    }
+}
+//output:Student list:
+ID: 1,Name: Alice
+ID: 2,Name: Bob
+ID: 3,Name: Charlie
+
+Student with ID 2: Bob
+
+Updated Student List:
+ID:2,Name: Robert
+ID:3,Name: Charlie
+
+Student ID 3 exists.
+Total students: 2
+
+
+
+//
+

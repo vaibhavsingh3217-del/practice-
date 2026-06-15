@@ -44,17 +44,60 @@ class Program
     }
 }
 
-Output:-
-Queue Elements:
-Alice
-Bob
-Charlie
+//Output:-
+//Queue Elements:
+//Alice
+//Bob
+//Charlie
 
-Served Person: Alice
-Next Person: Bob
+//Served Person: Alice
+//Next Person: Bob
 
-Updated Queue:
-Bob
-Charlie
+//Updated Queue:
+//Bob
+//Charlie
 
-Total People in Queue: 2
+//stack<T> - last in firstt out
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Stack<string> stack = new Stack<string>();
+
+        
+        stack.Push("Book 1");
+        stack.Push("Book 2");
+        stack.Push("Book 3");
+
+        
+        Console.WriteLine("Stack Elements:");
+
+        foreach (string book in stack)
+        {
+            Console.WriteLine(book);
+        }
+
+        
+        string removedBook = stack.Pop();
+        Console.WriteLine("\nRemoved: " + removedBook);
+
+        
+        Console.WriteLine("Top Element: " + stack.Peek());
+
+        
+        Console.WriteLine("\nUpdated Stack:");
+
+        foreach (string book in stack)
+        {
+            Console.WriteLine(book);
+        }
+
+        
+        Console.WriteLine("\nTotal Books: " + stack.Count);
+    }
+}
+

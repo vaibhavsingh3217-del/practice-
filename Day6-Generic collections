@@ -138,3 +138,6 @@ class Program
         Console.WriteLine(ht[2]);
     }
 }
+//Enqueue - add item
+//dequeue - removes item
+//peek() - view first item

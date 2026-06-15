@@ -100,4 +100,3 @@ class Program
         Console.WriteLine("\nTotal Books: " + stack.Count);
     }
 }
-

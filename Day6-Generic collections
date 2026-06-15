@@ -1,1 +1,60 @@
+#Generic Collections
+#Queue - First in First out
+# the first person to come in is the first to served.
+using System;
+using System.Collections.Generic;
 
+class Program
+{
+    static void Main()
+    {
+       
+        Queue<string> queue = new Queue<string>();
+
+        
+        queue.Enqueue("Alice");
+        queue.Enqueue("Bob");
+        queue.Enqueue("Charlie");
+
+      
+        Console.WriteLine("Queue Elements:");
+
+        foreach (string person in queue)
+        {
+            Console.WriteLine(person);
+        }
+
+        
+        string servedPerson = queue.Dequeue();
+        Console.WriteLine("\nServed Person: " + servedPerson);
+
+        
+        Console.WriteLine("Next Person: " + queue.Peek());
+
+        
+        Console.WriteLine("\nUpdated Queue:");
+
+        foreach (string person in queue)
+        {
+            Console.WriteLine(person);
+        }
+
+        
+        Console.WriteLine("\nTotal People in Queue: " + queue.Count);
+    }
+}
+
+Output:-
+Queue Elements:
+Alice
+Bob
+Charlie
+
+Served Person: Alice
+Next Person: Bob
+
+Updated Queue:
+Bob
+Charlie
+
+Total People in Queue: 2

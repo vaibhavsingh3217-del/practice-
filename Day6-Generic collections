@@ -100,3 +100,41 @@ class Program
         Console.WriteLine("\nTotal Books: " + stack.Count);
     }
 }
+//non generic collections 
+// stores data as object 
+//can hold different data types
+//ArrayList - stores items of different data types
+using System;
+using System.Collections;
+class Program
+{
+    static void Main()
+    {
+        ArrayList list = new ArrayList();
+        list.Add(10);
+        list.Add("Hello");
+        list.Add(true);
+        foreach(var item in list)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
+//HashTable
+//stores data as key value pairs
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main()
+    {
+        Hashtable ht = new Hashtable();
+
+        ht.Add(1, "Alice");
+        ht.Add(2, "Bob");
+
+        Console.WriteLine(ht[1]);
+        Console.WriteLine(ht[2]);
+    }
+}

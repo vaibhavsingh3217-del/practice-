@@ -141,3 +141,17 @@ class Program
 //Enqueue - add item
 //dequeue - removes item
 //peek() - view first item
+// implementation of vikas sir Lectures
+public class Program
+{
+ public string Name { get; set;}
+ public void greet() => Console.WriteLine($"Hello : {Name}");
+}
+class Program
+{
+  static void Main()
+  {
+    Person person = new();
+    person.Name = "Vikas";
+  }
+}

@@ -24,4 +24,20 @@
 //     Name = "Test"
 //}
 //student.Display()
-
+/var intBox = new Box <int>{value =  20};
+//var stringbox = new Box <string>{value =  "20"};
+//Console.ReadLine(intBox.Value);
+////Console.ReadLine();
+//Generic Class
+//public class Box <T>
+//{
+//  Public T value{get; set;}
+//}
+//Nested Class
+//public class outer
+//{
+//    public class inner
+//    {
+//        public void print()=>Console.WriteLine("Inner class");
+//    }       
+//

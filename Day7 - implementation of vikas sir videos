@@ -1,1 +1,27 @@
+// See https://aka.ms/new-console-template for more information
+//public partial class Student
+//{
+//    public string Name { get; set; }
+//}
+//public partial class student
+//{
+//    public void Display() => Console.WriteLine($"Student : {Name}");
+//}
+//Partial class
+//public partial class Student
+//{
+//   public string Name(get; set;)
+//}
+//public partial class student
+//{
+//  public void Display()=> Console.WriteLine($"student : Name")
+//}
+//sealed
+//var logger = new logger();
+//logger.Log("Test LOG");
+//Var Student = new Student
+//{
+//     Name = "Test"
+//}
+//student.Display()
 

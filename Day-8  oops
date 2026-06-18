@@ -1,0 +1,21 @@
+namespace oopdemo{
+
+    public class Employee
+    {
+        private string name;
+        private double Salary;
+        public string Name
+        {
+            get{return _name;}
+            set
+            {
+                if (!string.IsNullOrWhitespace(value))
+                    _name = value;
+                else
+                    Console.WriteLine("Name can't be null.");
+            }
+        }
+    }
+
+
+}

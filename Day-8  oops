@@ -1,3 +1,4 @@
+// See https://aka.ms/new-console-template for more information
 namespace oopdemo{
 
     public class Employee
@@ -15,7 +16,63 @@ namespace oopdemo{
                     Console.WriteLine("Name can't be null.");
             }
         }
+        public double Salary
+        {
+            get { return _Salary; }
+            set
+            {
+                if (value > 0)
+                    _salary = value;
+                else
+                    Console.WriteLine
+            }
+        }
+    
+
+        oopdemo.Employee employee = new()
+        {
+          Name = "John"
+          Salary = 1000
+        };
+        employee.DisplayData();
+        Console.ReadLine();
     }
+}
+using System;
 
+class Employee
+{
+    public string Name;
+    public int Id;
 
+    public void GetEmployeeDetails()
+    {
+        Console.WriteLine("Employee Name: " + Name);
+        Console.WriteLine("Employee ID: " + Id);
+    }
+}
+
+class SalaryEmployee : Employee
+{
+    public double Salary;
+
+    public void GetSalaryDetails()
+    {
+        Console.WriteLine("Salary: " + Salary);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        SalaryEmployee emp = new SalaryEmployee();
+
+        emp.Name = "John";
+        emp.Id = 101;
+        emp.Salary = 50000;
+
+        emp.GetEmployeeDetails();
+        emp.GetSalaryDetails();
+    }
 }

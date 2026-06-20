@@ -1,1 +1,198 @@
+//types of inheritance
+//single inheritance - one chlid class inherits from one parent class
+//using System;
 
+
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Dog dog = new Dog();
+
+        // Method inherited from Animal
+        dog.Eat();
+
+        // Method of Dog class
+        dog.Bark();
+    }
+}
+//multiple inheritance 
+// one child class inherits from more than one parent class 
+using System;
+class Father
+{
+    public void ShowFather()
+    {
+        Console.WriteLine("Father class");
+    }
+}
+
+class Mother
+{
+    public void ShowMother()
+    {
+        Console.WriteLine("Mother class");
+    }
+}
+
+class Child : Father, Mother
+{
+}
+//multilevel inheritance 
+//in multilevel inheritance a class inherits from another class and then a third class inherits from that derived class ,  forming a chain of inheritance 
+using System;
+// Base class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+// Derived class
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+// Derived from Dog
+class Puppy : Dog
+{
+    public void Weep()
+    {
+        Console.WriteLine("Puppy is weeping.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Puppy puppy = new Puppy();
+        Puppy.Eat();
+        Puppy.Bark();
+        Puppy.Weep();
+    }
+}
+//Animal
+   ↓
+//Dog
+   ↓
+//Puppy
+//hierarchical inheritance
+// multiple child classes inherit from same parent class 
+//using System;
+
+// Parent class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+// Child class 1
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+// Child class 2
+class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Cat is meowing.");
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        dog.Eat();   // Inherited from Animal
+        dog.Bark();
+
+        Cat cat = new Cat();
+        cat.Eat();   // Inherited from Animal
+        cat.Meow();
+    }
+}
+// Animal
+    /    \
+  Dog    Cat
+
+//hybrid inheritance 
+// hybrid inheritance is a mixture of two or more than two types of inheritance
+//often involving multiple inheritance 
+//C# do not directly support hybrid inheritance through classes
+//using System;
+
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+interface IPet
+{
+    void Play();
+}
+
+class Puppy : Dog, IPet
+{
+    public void Play()
+    {
+        Console.WriteLine("Puppy is playing.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Puppy puppy = new Puppy();
+
+        puppy.Eat();   // From Animal
+        puppy.Bark();  // From Dog
+        puppy.Play();  // From IPet
+    }
+}
+//     Animal
+         ↓
+        Dog
+         ↓
+       Puppy
+         ↑
+       IPet

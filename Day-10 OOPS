@@ -1,1 +1,74 @@
+namespace OOPDEMO
+{   
+   public class Base
+   {
+      public int id {get; set;}
+   }  
+      public class Employee : Base 
+      {
+       protected string _name;
+       protected double _salary;
+       public double salary
+      {
+        get { return _salary ; }
+        set 
+        {
+          if (value > 0)
+             _Salary = value;
+          else
+              Console.WritLine("Salary can't zero or negative");
+        }
+      }
+   public class Person : Employee
+   {
+       public string Name
+       {
+          get { return _name; }
+          set
+          {
+            if (!string.IsNullorWhitespace(value))
+              _name = value;
+            else
+                Console.WriteLine("Name can't be null");
+          }
+       }
+       public void DisplayData()
 
+        {
+            Console.WriteLine($"Name { Name } , Salary { Salary } ");
+        }
+}
+
+
+// See https://aka.ms/new-console-template for more information
+using System;
+
+namespace OOPdemo
+{
+    internal interface IBase
+    {
+        string Name { get; }
+    }
+}
+
+public class Person : Employee, IBase
+{
+    public string Name
+    {
+        get { return _name; }
+        set
+        {
+            if (!string.IsNullOrWhitespace(value))
+                _name = value;
+            else
+                Console.WriteLine("Name can't be Null");
+        }
+    }
+    public string Names { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public void DisplayData()
+    {
+        Console.WriteLine($"Name {Name},Salary {Salary} id {Id}");
+    }
+}
+// abstraction - used to hide implementation details and expose only the useful methods 
+public abstract class paymentprocessor 

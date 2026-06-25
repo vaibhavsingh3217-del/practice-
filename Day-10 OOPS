@@ -70,5 +70,3 @@ public class Person : Employee, IBase
         Console.WriteLine($"Name {Name},Salary {Salary} id {Id}");
     }
 }
-// abstraction - used to hide implementation details and expose only the useful methods 
-public abstract class paymentprocessor 

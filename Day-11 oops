@@ -1,1 +1,68 @@
+//abstraction - to hide implementation details and expose only specific or important method 
+//namespace oopdemo
+//{
+//    public abstract class Paymentproccessor
+//    {
+//        public abstract void ProcessPayment(decimal amount);
+//        public void Sendreceipt(string small)
+//        {
+//            Console.WriteLine($"Receipt sent to {email}.");
+//        }
+//    }
+//    public class CreditCardProccessor : Paymentproccessor 
+//    {
+//        public void ProccessPayment(decimal amount)
+//        {
+//            Console.WriteLine($"Proccessing Payment of {amount:C}.");
+//        }
+//    }
+//    public class UPIproccesor : Paymentproccessor
+//    {
+//        public void ProccessPayment(decimal amount)
+//        {
+//            Console.WriteLine($"Proccessing UPI Payment of {amount:C}.");
+//        }
+//    }
+//    Payment proccesor = new CeditCardProccessor();
+//    processor.proccess payment(1200);
+//    processor.sendreciept("test@gmail.com");
+//    Console.WriteLine();
+//}
+//using System;
 
+class Student
+{
+    private string name;
+    private int rollNo;
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+    public int RollNo
+    {
+        get { return rollNo; }
+        set { rollNo = value; }
+    }
+
+    public void DisplayDetails()
+    {
+        Console.WriteLine($"Student Name: {Name}");
+        Console.WriteLine($"Roll Number: {RollNo}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Student s = new Student();
+
+        s.Name = "Vaibhav Singh";
+        s.RollNo = 101;
+
+        s.DisplayDetails();
+    }
+}
